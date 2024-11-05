@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iterables and iterators </title>
+</head>
+<body>
+    <h1>iterables and iterators -JS</h1>
+
+
+
+    <script>
+        //Iterables//
+
+       
+       const myArray = [1, 2, 3, 4];
+
+
+        for (const item of myArray) {
+           console.log(item);
+        }
+
+
+        // Iterators//
+
+        
+       const myArrays = [1, 2, 3, 4];
+       const myIterator = myArray[Symbol.iterator]();  
+
+       console.log(myIterator.next());  // Output: { value: 1, done: false }
+       console.log(myIterator.next());  // Output: { value: 2, done: false }
+       console.log(myIterator.next());  // Output: { value: 3, done: false }
+       console.log(myIterator.next());  // Output: { value: 4, done: false }
+       console.log(myIterator.next());  // Output: { value: undefined, done: true }
+
+
+    </script>
+</body>
+</html>
